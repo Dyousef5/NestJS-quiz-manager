@@ -18,7 +18,7 @@ module.exports = {
   ignorePatterns: ['.eslintrc.js'],
   rules: {
     "prettier/prettier": [
-      "error",
+      "off",
       {
         "endOfLine": "auto"
       },
