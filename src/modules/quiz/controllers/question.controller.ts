@@ -1,7 +1,6 @@
 import {
   Body,
   Controller,
-  Get,
   Post,
   UsePipes,
   ValidationPipe,
@@ -18,7 +17,7 @@ export class QuestionController {
     private quizService: QuizService,
   ) {}
 
-  @Get('')
+
   @Post('')
   @UsePipes(ValidationPipe)
   async saveQuestion(@Body() question: CreateQuestionDto): Promise<Question> {
