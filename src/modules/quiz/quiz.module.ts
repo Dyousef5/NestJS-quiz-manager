@@ -6,12 +6,12 @@ import { DatabaseModule } from 'src/database/database.module';
 import { QuestionController } from './controllers/question.controller';
 import { QuestionService } from './services/question.service';
 import { questionProviders } from './providers/question.providers';
-import { optionProviders } from './providers/option.providers';
+import { optionProviders } from './providers/option.provider';
 import { OptionController } from './controllers/option.controller';
 import { OptionService } from './services/option.service';
 
 @Module({
-  controllers: [QuizController, QuestionController,OptionController],
+  controllers: [QuizController, QuestionController, OptionController],
   imports: [DatabaseModule],
   providers: [
     QuizService,
@@ -19,7 +19,7 @@ import { OptionService } from './services/option.service';
     QuestionService,
     ...questionProviders,
     OptionService,
-    ...optionProviders
+    ...optionProviders,
   ],
 })
 export class QuizModule {}

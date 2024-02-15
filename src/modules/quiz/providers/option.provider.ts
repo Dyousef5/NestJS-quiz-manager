@@ -1,7 +1,6 @@
 import { DataSource } from 'typeorm';
 import { Option } from '../entities/option.entity';
 
-
 export const optionProviders = [
   {
     provide: 'OPTION_REPOSITROY',

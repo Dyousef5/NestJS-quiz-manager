@@ -11,10 +11,7 @@ export class OptionService {
     private optionRepository: Repository<Option>,
   ) {}
 
-  async createOption(
-    option: CreateOptionDto,
-    question: Question,
-  ){
+  async createOption(option: CreateOptionDto, question: Question) {
     const newOption = await this.optionRepository.save({
       text: option.text,
       isCorrect: option.isCorrect,
